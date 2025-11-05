@@ -66,7 +66,7 @@ sudo chmod +x /usr/local/bin/smart-clipboard-gui
 # Install systemd service
 echo "⚙️  Installing systemd service..."
 mkdir -p ~/.config/systemd/user/
-sed "s/%USER/$USER/g" smart-clipboard.service > ~/.config/systemd/user/smart-clipboard.service
+cp smart-clipboard.service ~/.config/systemd/user/smart-clipboard.service
 
 # Install desktop entry
 echo "🖥️  Installing desktop entry..."
