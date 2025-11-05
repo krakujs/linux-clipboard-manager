@@ -13,7 +13,7 @@ class Config:
     DEFAULT_CONFIG = {
         "max_history": 1000,
         "monitor_interval": 0.5,  # seconds
-        "hotkey": "<ctrl>+<shift>+v",
+        "hotkey": "<ctrl>+<alt>+v",
         "database_path": "clipboard.db",
         "max_content_size": 1048576,  # 1MB
         "enable_encryption": False,

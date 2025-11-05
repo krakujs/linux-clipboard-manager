@@ -24,7 +24,7 @@ A powerful clipboard manager with history, search, and smart categorization feat
 - ⭐ **Favorites**: Pin frequently used clips for quick access
 - 🔒 **Privacy Protection**: Automatically excludes sensitive content from password managers
 - 🎯 **Deduplication**: Doesn't store identical content twice
-- ⌨️ **Global Hotkey**: Quick access with Ctrl+Shift+V
+- ⌨️ **Global Hotkey**: Quick access with Ctrl+Alt+V
 - 🔄 **Auto-Refresh**: Shows newly copied items immediately
 
 ### 🎨 User Interface
@@ -79,7 +79,7 @@ pip install git+https://github.com/krakujs/linux-clipboard-manager.git
 ### After Installation
 
 1. **Start the Application**: The clipboard manager starts automatically in the background
-2. **Open the UI**: Press `Ctrl+Shift+V` to open the clipboard manager window
+2. **Open the UI**: Press `Ctrl+Alt+V` to open the clipboard manager window
 3. **Copy Items**: Click on any item to copy it to your clipboard
 4. **Search**: Type in the search box to filter clipboard history
 5. **Filter by Type**: Click buttons to filter by content type (All, URLs, Code, Favorites)
@@ -88,7 +88,7 @@ pip install git+https://github.com/krakujs/linux-clipboard-manager.git
 
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl+Shift+V` | Toggle clipboard manager window |
+| `Ctrl+Alt+V` | Toggle clipboard manager window |
 | `Enter` | Paste selected clip |
 | `Escape` | Close window |
 | `Double-click` | Paste selected clip |
@@ -121,7 +121,7 @@ The configuration file is located at: `~/.smart-clipboard/config.json`
 {
   "max_history": 1000,
   "monitor_interval": 0.5,
-  "hotkey": "<ctrl>+<shift>+v",
+  "hotkey": "<ctrl>+<alt>+v",
   "database_path": "clipboard.db",
   "max_content_size": 1048576,
   "enable_encryption": false,
@@ -144,8 +144,8 @@ The configuration file is located at: `~/.smart-clipboard/config.json`
 ### Customizing the Hotkey
 
 Edit the `hotkey` field in config.json. Examples:
-- `<ctrl>+<shift>+v` (default)
-- `<ctrl>+<alt>+c`
+- `<ctrl>+<alt>+v` (default)
+- `<ctrl>+<shift>+c`
 - `<cmd>+<shift>+v` (macOS)
 
 ---
@@ -258,6 +258,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ## 🔄 Changelog
+
+### v1.0.1 (2024-11-05)
+- 🔧 **Changed hotkey** from Ctrl+Shift+V to Ctrl+Alt+V to avoid conflicts
+- 📚 **Updated documentation** with new hotkey information
+- 🐛 **Fixed hotkey collision** issues with other applications
 
 ### v1.0.0 (2024-11-05)
 - ✨ Initial release

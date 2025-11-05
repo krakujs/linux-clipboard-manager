@@ -77,7 +77,7 @@ which smart-clipboard-gui
 ### Basic Usage
 
 1. **Start**: The application starts automatically in the background
-2. **Open UI**: Press `Ctrl+Shift+V` to open the clipboard manager
+2. **Open UI**: Press `Ctrl+Alt+V` to open the clipboard manager
 3. **Copy Items**: Click on any item to copy it to your clipboard
 4. **Search**: Type in the search box to filter clipboard history
 5. **Filter**: Use buttons to filter by content type (URLs, Code, Favorites)
@@ -86,7 +86,7 @@ which smart-clipboard-gui
 
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl+Shift+V` | Toggle clipboard manager |
+| `Ctrl+Alt+V` | Toggle clipboard manager |
 | `Enter` | Paste selected item |
 | `Escape` | Close window |
 | `Double-click` | Paste selected item |
