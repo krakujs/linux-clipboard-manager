@@ -49,6 +49,9 @@ class ClipboardUI:
         self.root.geometry(f"{width}x{height}+{x}+{y}")
         self.root.withdraw()  # Start hidden
         
+        # Prevent window from being destroyed when closed - just hide it
+        self.root.protocol("WM_DELETE_WINDOW", self.hide)
+        
         # Create UI elements
         self._create_widgets()
         
