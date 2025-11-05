@@ -25,7 +25,7 @@ setup(
     description="A powerful clipboard manager with history, search, and smart categorization",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/your-username/smart-clipboard-manager",
+    url="https://github.com/krakujs/linux-clipboard-manager",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -69,9 +69,9 @@ setup(
     zip_safe=False,
     keywords="clipboard manager history copy paste productivity",
     project_urls={
-        "Bug Reports": "https://github.com/your-username/smart-clipboard-manager/issues",
-        "Source": "https://github.com/your-username/smart-clipboard-manager",
-        "Documentation": "https://github.com/your-username/smart-clipboard-manager/blob/main/README.md",
+        "Bug Reports": "https://github.com/krakujs/linux-clipboard-manager/issues",
+        "Source": "https://github.com/krakujs/linux-clipboard-manager",
+        "Documentation": "https://github.com/krakujs/linux-clipboard-manager/blob/main/README.md",
     },
 )
 

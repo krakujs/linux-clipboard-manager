@@ -48,15 +48,15 @@ A powerful clipboard manager with history, search, and smart categorization feat
 
 ```bash
 # Download and run the installation script
-curl -fsSL https://raw.githubusercontent.com/your-username/smart-clipboard-manager/main/install-system.sh | bash
+curl -fsSL https://raw.githubusercontent.com/krakujs/linux-clipboard-manager/main/install-system.sh | bash
 ```
 
 ### Option 2: Manual Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/smart-clipboard-manager.git
-cd smart-clipboard-manager
+git clone https://github.com/krakujs/linux-clipboard-manager.git
+cd linux-clipboard-manager
 
 # Run the installation script
 ./install-system.sh
@@ -69,7 +69,7 @@ cd smart-clipboard-manager
 pip install smart-clipboard-manager
 
 # Or install from source
-pip install git+https://github.com/your-username/smart-clipboard-manager.git
+pip install git+https://github.com/krakujs/linux-clipboard-manager.git
 ```
 
 ---
@@ -223,7 +223,7 @@ smart-clipboard-manager/
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions! Please see our [Contributing Guidelines](https://github.com/krakujs/linux-clipboard-manager/blob/master/CONTRIBUTING.md) for details.
 
 ### How to Contribute
 
@@ -251,9 +251,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- 🐛 **Bug Reports**: [Open an issue](https://github.com/your-username/smart-clipboard-manager/issues)
-- 💡 **Feature Requests**: [Open an issue](https://github.com/your-username/smart-clipboard-manager/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/your-username/smart-clipboard-manager/discussions)
+- 🐛 **Bug Reports**: [Open an issue](https://github.com/krakujs/linux-clipboard-manager/issues)
+- 💡 **Feature Requests**: [Open an issue](https://github.com/krakujs/linux-clipboard-manager/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/krakujs/linux-clipboard-manager/discussions)
 
 ---
 
@@ -277,6 +277,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ for productivity enthusiasts**
 
-[⭐ Star this repo](https://github.com/your-username/smart-clipboard-manager) • [🐛 Report issues](https://github.com/your-username/smart-clipboard-manager/issues) • [💬 Start a discussion](https://github.com/your-username/smart-clipboard-manager/discussions)
+[⭐ Star this repo](https://github.com/krakujs/linux-clipboard-manager) • [🐛 Report issues](https://github.com/krakujs/linux-clipboard-manager/issues) • [💬 Start a discussion](https://github.com/krakujs/linux-clipboard-manager/discussions)
 
 </div>
