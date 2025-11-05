@@ -19,7 +19,7 @@ if requirements_file.exists():
 
 setup(
     name="smart-clipboard-manager",
-    version="1.0.3",
+    version="1.0.4",
     author="Smart Clipboard Team",
     author_email="contact@smart-clipboard.com",
     description="A powerful clipboard manager with history, search, and smart categorization",
@@ -34,7 +34,6 @@ setup(
         "Topic :: Desktop Environment",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
@@ -44,7 +43,7 @@ setup(
         "Operating System :: Microsoft :: Windows",
         "Operating System :: MacOS :: MacOS X",
     ],
-    python_requires=">=3.7",
+    python_requires=">=3.8",
     install_requires=requirements,
     extras_require={
         "dev": [
