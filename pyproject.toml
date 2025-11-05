@@ -1,0 +1,130 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart-clipboard-manager"
+version = "1.0.0"
+description = "A powerful clipboard manager with history, search, and smart categorization"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Smart Clipboard Team", email = "contact@smart-clipboard.com"}
+]
+maintainers = [
+    {name = "Smart Clipboard Team", email = "contact@smart-clipboard.com"}
+]
+keywords = ["clipboard", "manager", "history", "copy", "paste", "productivity"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Desktop Environment",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "pyperclip>=1.8.2",
+    "pynput>=1.7.6",
+    "pillow>=10.0.0",
+    "python-dateutil>=2.8.2",
+    "cryptography>=41.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "flake8>=5.0.0",
+    "black>=22.0.0",
+    "isort>=5.10.0",
+]
+windows = [
+    "pywin32>=305",
+    "psutil>=5.9.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/smart-clipboard-manager"
+Documentation = "https://github.com/your-username/smart-clipboard-manager/blob/main/README.md"
+Repository = "https://github.com/your-username/smart-clipboard-manager.git"
+"Bug Tracker" = "https://github.com/your-username/smart-clipboard-manager/issues"
+
+[project.scripts]
+smart-clipboard = "main:main"
+smart-clipboard-gui = "main:show_ui_only"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "."
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--verbose",
+    "--cov=src",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-report=xml",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["src"]
+
+[tool.coverage.run]
+source = ["src"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "setup.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
