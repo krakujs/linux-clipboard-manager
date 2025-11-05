@@ -43,14 +43,55 @@ pipx ensurepath
 echo "🐍 Installing Linux Clipboard Manager..."
 pipx install linux-clipboard-manager
 
+# Set up systemd service for autostart
+echo "⚙️  Setting up autostart service..."
+mkdir -p ~/.config/systemd/user/
+
+# Create service file
+cat > ~/.config/systemd/user/linux-clipboard-manager.service << 'EOF'
+[Unit]
+Description=Linux Clipboard Manager
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/smart-clipboard
+Restart=on-failure
+RestartSec=5
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=%h/.Xauthority
+
+[Install]
+WantedBy=default.target
+EOF
+
+# Reload systemd and enable service
+systemctl --user daemon-reload
+systemctl --user enable linux-clipboard-manager.service
+systemctl --user start linux-clipboard-manager.service
+
+# Wait for service to start
+sleep 2
+
+# Check if service is running
+if systemctl --user is-active --quiet linux-clipboard-manager.service; then
+    print_success "Service is running!"
+else
+    print_warning "Service may not have started. Check with: systemctl --user status linux-clipboard-manager.service"
+fi
+
 print_success "Installation completed!"
 echo ""
 echo "🎯 Usage:"
-echo "   • Run 'smart-clipboard' to start the background service"
-echo "   • Run 'smart-clipboard-gui' to open the UI"
-echo "   • Press Ctrl+Alt+V to toggle the clipboard manager (when running)"
+echo "   • The clipboard manager is now running in the background"
+echo "   • Press Ctrl+Alt+V to toggle the clipboard manager window"
+echo "   • Run 'smart-clipboard-gui' to open just the UI"
+echo ""
+echo "🔧 Service Management:"
+echo "   • Status: systemctl --user status linux-clipboard-manager.service"
+echo "   • Stop: systemctl --user stop linux-clipboard-manager.service"
+echo "   • Restart: systemctl --user restart linux-clipboard-manager.service"
+echo "   • Disable autostart: systemctl --user disable linux-clipboard-manager.service"
 echo ""
 echo "📝 Configuration file: ~/.smart-clipboard/config.json"
 echo "🗄️  Database: ~/.smart-clipboard/clipboard.db"
-echo ""
-print_warning "To start automatically on login, set up a systemd service or autostart entry."

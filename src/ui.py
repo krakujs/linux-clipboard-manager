@@ -154,8 +154,11 @@ class ClipboardUI:
         if self.root is None:
             self.create_window()
         
+        print("UI show() called")
         self.root.deiconify()
         self.root.lift()
+        self.root.attributes('-topmost', True)  # Force window to top
+        self.root.after(100, lambda: self.root.attributes('-topmost', False))  # Remove topmost after showing
         self.root.focus_force()
         
         # Refresh clips list
@@ -167,6 +170,7 @@ class ClipboardUI:
         # Enable auto-refresh and show all clips when window opens
         self.auto_refresh_enabled = True
         self._refresh_clips()
+        print(f"UI shown, viewable: {self.root.winfo_viewable()}")
     
     def hide(self):
         """Hide the UI window"""

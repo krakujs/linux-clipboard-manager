@@ -61,15 +61,23 @@ class SmartClipboardApp:
         
         print(f"Hotkey: {hotkey}")
         print("Smart Clipboard Manager is ready!")
-        print("Press Ctrl+Shift+V to open the clipboard manager")
+        print(f"Press {hotkey.replace('<', '').replace('>', '').replace('+', '+')} to open the clipboard manager")
         print("Press Ctrl+C to exit")
     
     def toggle_ui(self):
         """Toggle UI visibility"""
-        if self.root.winfo_viewable():
-            self.ui.hide()
-        else:
-            self.ui.show()
+        print(f"Hotkey pressed! Window visible: {self.root.winfo_viewable()}")
+        try:
+            if self.root.winfo_viewable():
+                self.ui.hide()
+                print("Hiding UI")
+            else:
+                self.ui.show()
+                print("Showing UI")
+        except Exception as e:
+            print(f"Error toggling UI: {e}")
+            import traceback
+            traceback.print_exc()
     
     def start(self):
         """Start the application"""
