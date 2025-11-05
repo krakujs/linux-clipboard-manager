@@ -48,7 +48,7 @@ A powerful clipboard manager with history, search, and smart categorization feat
 
 ```bash
 # Download and run the installation script
-curl -fsSL https://raw.githubusercontent.com/krakujs/linux-clipboard-manager/main/install-system.sh | bash
+curl -fsSL https://raw.githubusercontent.com/krakujs/linux-clipboard-manager/master/install-system.sh | bash
 ```
 
 ### Option 2: Manual Installation
