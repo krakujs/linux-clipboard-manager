@@ -60,8 +60,8 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "smart-clipboard=main:main",
-            "smart-clipboard-gui=main:show_ui_only",
+            "smart-clipboard=src.__main__:main",
+            "smart-clipboard-gui=src.__main__:show_ui_only",
         ],
     },
     include_package_data=True,

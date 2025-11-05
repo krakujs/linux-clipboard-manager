@@ -44,32 +44,29 @@ A powerful clipboard manager with history, search, and smart categorization feat
 
 ## 🚀 Quick Install
 
-### Option 1: One-Click Installation (Recommended)
+### Option 1: Install via pipx (Recommended)
 
 ```bash
-# Download and run the installation script
+# Install pipx if you don't have it
+sudo apt install pipx
+pipx ensurepath
+
+# Install from PyPI
+pipx install linux-clipboard-manager
+```
+
+### Option 2: Install from source
+
+```bash
+# Install from GitHub
+pipx install git+https://github.com/krakujs/linux-clipboard-manager.git
+```
+
+### Option 3: One-Click System Installation
+
+```bash
+# Download and run the installation script (installs system dependencies + app)
 curl -fsSL https://raw.githubusercontent.com/krakujs/linux-clipboard-manager/master/install-system.sh | bash
-```
-
-### Option 2: Manual Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/krakujs/linux-clipboard-manager.git
-cd linux-clipboard-manager
-
-# Run the installation script
-./install-system.sh
-```
-
-### Option 3: Install via pip
-
-```bash
-# Install from PyPI (when published)
-pip install smart-clipboard-manager
-
-# Or install from source
-pip install git+https://github.com/krakujs/linux-clipboard-manager.git
 ```
 
 ---
@@ -78,11 +75,12 @@ pip install git+https://github.com/krakujs/linux-clipboard-manager.git
 
 ### After Installation
 
-1. **Start the Application**: The clipboard manager starts automatically in the background
-2. **Open the UI**: Press `Ctrl+Alt+V` to open the clipboard manager window
-3. **Copy Items**: Click on any item to copy it to your clipboard
-4. **Search**: Type in the search box to filter clipboard history
-5. **Filter by Type**: Click buttons to filter by content type (All, URLs, Code, Favorites)
+1. **Start the Application**: Run `smart-clipboard` in a terminal to start the background service
+2. **Open the UI**: Press `Ctrl+Alt+V` to toggle the clipboard manager window (while service is running)
+3. **Or Open GUI Directly**: Run `smart-clipboard-gui` to open just the UI
+4. **Copy Items**: Click on any item to copy it to your clipboard
+5. **Search**: Type in the search box to filter clipboard history
+6. **Filter by Type**: Click buttons to filter by content type (All, URLs, Code, Favorites)
 
 ### Keyboard Shortcuts
 
@@ -96,17 +94,14 @@ pip install git+https://github.com/krakujs/linux-clipboard-manager.git
 ### Command Line Usage
 
 ```bash
-# Start background service
+# Start background service (monitors clipboard + hotkey)
 smart-clipboard
 
-# Open GUI manually
+# Open GUI only (no background monitoring)
 smart-clipboard-gui
 
-# Check service status
-systemctl --user status smart-clipboard.service
-
-# Stop service
-systemctl --user stop smart-clipboard.service
+# Start with UI visible
+smart-clipboard --show-ui
 ```
 
 ---

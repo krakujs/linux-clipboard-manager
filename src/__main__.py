@@ -7,15 +7,12 @@ import signal
 import argparse
 from pathlib import Path
 
-# Add current directory to path
-sys.path.insert(0, str(Path(__file__).parent))
-
-from src.config import Config
-from src.storage import ClipboardStorage
-from src.content_analyzer import ContentAnalyzer
-from src.clipboard_monitor import ClipboardManager
-from src.ui import ClipboardUI
-from src.hotkey_handler import HotkeyHandler
+from .config import Config
+from .storage import ClipboardStorage
+from .content_analyzer import ContentAnalyzer
+from .clipboard_monitor import ClipboardManager
+from .ui import ClipboardUI
+from .hotkey_handler import HotkeyHandler
 
 
 class SmartClipboardApp:
