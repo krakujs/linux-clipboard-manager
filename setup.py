@@ -19,7 +19,7 @@ if requirements_file.exists():
 
 setup(
     name="smart-clipboard-manager",
-    version="1.0.2",
+    version="1.0.3",
     author="Smart Clipboard Team",
     author_email="contact@smart-clipboard.com",
     description="A powerful clipboard manager with history, search, and smart categorization",
