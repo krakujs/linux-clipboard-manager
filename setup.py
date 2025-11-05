@@ -18,7 +18,7 @@ if requirements_file.exists():
         requirements = [req.strip() for req in requirements if req.strip() and not req.startswith('#')]
 
 setup(
-    name="smart-clipboard-manager",
+    name="linux-clipboard-manager",
     version="1.0.6",
     author="Smart Clipboard Team",
     author_email="contact@smart-clipboard.com",
